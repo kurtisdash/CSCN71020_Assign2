@@ -70,15 +70,17 @@ int getIntInput(char message[]) {
 	return input;
 }
 
-void setLength(int input, int *length) {
+int setLength(int input, int *length) {
 	if (input >= 0 && input < 100) {
 		*length = input;
+		return length;
 	}
 }
 
-void setWidth(int input, int *width) {
+int setWidth(int input, int *width) {
 	if (input > 0 && input <= 100) {
 		*width = input;
+		return width;
 	}
 }
 
