@@ -1,7 +1,6 @@
 #include "pch.h"
 #include "CppUnitTest.h"
 
-//calling the function from main.c
 extern "C" int getPerimeter(int* length, int* width);
 extern "C" int getArea(int* length, int* width);
 
@@ -22,8 +21,6 @@ namespace Assignment2UnitTests
 
 			//using "&" for length and width to assign them pointers
 			Result = getPerimeter(&length, &width);
-
-			//if the perimeter equation works, this should succeed.
 			Assert::AreEqual(20, Result);
 		}
 			
@@ -35,8 +32,6 @@ namespace Assignment2UnitTests
 
 			//using "&" for length and width to assign them pointers
 			Result = getArea(&length, &width);
-
-			//if the area equation works, this should succeed.
 			Assert::AreEqual(56, Result);
 		}
 	};
