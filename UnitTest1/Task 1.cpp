@@ -42,61 +42,61 @@ namespace Assignment2UnitTests
 		TEST_METHOD(setLength_PositiveLength_TestUpperLimit) {
 			//testing the upper lmit of the setLength function
 			int length = 1;
-			int input = 99;
+			int input = 100;
 			setLength(input, &length);
 
-			//testing the upper possible integer. any higher will cause failure.
-			Assert::AreEqual(input, length);
+			//testing the an integer one out of range. one lower will be in range
+			Assert::IsFalse(input == length);
 		}
 
 		TEST_METHOD(setLength_PositiveLength_TestLowerLimit) {
 			//testing the lower lmit of the setLength function
 			int length = 99;
-			int input = 1;
+			int input = 0;
 			setLength(input, &length);
 
-			//testing the lowest possible integer. any lower will cause failure.
-			Assert::AreEqual(input, length);
+			//testing an integer one out of range. one higher will be in range
+			Assert::IsFalse (input == length);
 		}
 
-		TEST_METHOD(setLength_PositiveLength_TestLowerLimit_iAmFillerFixMe) {
+		TEST_METHOD(setLength_PositiveLength_TakesInput) {
 			//testing the lower lmit of the setLength function
-			int length = 99;
-			int input = 1;
+			int length = 60;
+			int input = 50;
 			setLength(input, &length);
 
-			//testing the lowest possible integer. any lower will cause failure.
+			//testing to see if some arbitary number that should work works.
 			Assert::AreEqual(input, length);
 		}
-
+		// WIDTH
 		TEST_METHOD(setWidth_PositiveLength_TestUpperLimit) {
 			//testing the lower lmit of the setWidth function
 			int length = 1;
-			int input = 99;
+			int input = 100;
 			setLength(input, &length);
 
-			//testing the lowest possible integer. any lower will cause failure.
-			Assert::AreEqual(input, length);
+			//testing an integer that is one out of range. one less will be in range.
+			Assert::IsFalse(input == length);
 		}
 
 		TEST_METHOD(setWidth_PositiveLength_TestLowerLimit) {
 			//testing the lower lmit of the setWidth function
-			int length = 99;
-			int input = 1;
+			int length = 60;
+			int input = 0;
 			setLength(input, &length);
 
-			//testing the lowest possible integer. any lower will cause failure.
-			Assert::AreEqual(input, length);
+			//testing the lowest possible integer. one higher will be in range.
+			Assert::IsFalse(input == length);
 
 		}
 		
-		TEST_METHOD(setWidth_PositiveLength_TestLowerLimit_IWillBeThirdTask) {
+		TEST_METHOD(setWidth_PositiveLength_TakesInput) {
 			//testing the lower lmit of the setWidth function
 			int length = 99;
-			int input = 1;
+			int input = 50;
 			setLength(input, &length);
 
-			//testing the lowest possible integer. any lower will cause failure.
+			//testing some arbitary number that should work
 			Assert::AreEqual(input, length);
 
 		}

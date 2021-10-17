@@ -70,12 +70,14 @@ int getIntInput(char message[]) {
 	return input;
 }
 
+//fixing the function by removing <=
 void setLength(int input, int *length) {
 	if (input > 0 && input < 100) {
 		*length = input;
 	}
 }
 
+//fixing the function by removing <=
 void setWidth(int input, int *width) {
 	if (input > 0 && input < 100) {
 		*width = input;
