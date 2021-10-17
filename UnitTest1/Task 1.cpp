@@ -13,6 +13,8 @@ namespace Assignment2UnitTests
 	{
 	public:
 
+		//TASK 1
+
 		TEST_METHOD(getPerimeter_PositiveLengthPositiveWidth_findPerimiter)
 		{
 			//testing the perimeter function using 5 and 5
@@ -36,6 +38,7 @@ namespace Assignment2UnitTests
 			Assert::AreEqual(56, Result);
 		}
 
+		//TASK 2
 		TEST_METHOD(setLength_PositiveLength_TestUpperLimit) {
 			//testing the upper lmit of the setLength function
 			int length = 1;
@@ -55,5 +58,48 @@ namespace Assignment2UnitTests
 			//testing the lowest possible integer. any lower will cause failure.
 			Assert::AreEqual(input, length);
 		}
+
+		TEST_METHOD(setLength_PositiveLength_TestLowerLimit_iAmFillerFixMe) {
+			//testing the lower lmit of the setLength function
+			int length = 99;
+			int input = 1;
+			setLength(input, &length);
+
+			//testing the lowest possible integer. any lower will cause failure.
+			Assert::AreEqual(input, length);
+		}
+
+		TEST_METHOD(setWidth_PositiveLength_TestUpperLimit) {
+			//testing the lower lmit of the setWidth function
+			int length = 1;
+			int input = 99;
+			setLength(input, &length);
+
+			//testing the lowest possible integer. any lower will cause failure.
+			Assert::AreEqual(input, length);
+		}
+
+		TEST_METHOD(setWidth_PositiveLength_TestLowerLimit) {
+			//testing the lower lmit of the setWidth function
+			int length = 99;
+			int input = 1;
+			setLength(input, &length);
+
+			//testing the lowest possible integer. any lower will cause failure.
+			Assert::AreEqual(input, length);
+
+		}
+		
+		TEST_METHOD(setWidth_PositiveLength_TestLowerLimit_IWillBeThirdTask) {
+			//testing the lower lmit of the setWidth function
+			int length = 99;
+			int input = 1;
+			setLength(input, &length);
+
+			//testing the lowest possible integer. any lower will cause failure.
+			Assert::AreEqual(input, length);
+
+		}
 	};
 }
+
