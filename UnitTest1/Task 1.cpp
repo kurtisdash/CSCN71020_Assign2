@@ -22,7 +22,7 @@ namespace Assignment2UnitTests
 			int width = 5;
 			int Result = 0;
 
-			//using "&" for length and width to assign them pointers
+			//using "&" for length and width to assign them pointers. this should output 20.
 			Result = getPerimeter(&length, &width);
 			Assert::AreEqual(20, Result);
 		}
@@ -33,70 +33,70 @@ namespace Assignment2UnitTests
 			int width = 8;
 			int Result = 0;
 
-			//using "&" for length and width to assign them pointers
+			//using "&" for length and width to assign them pointers. this should output 56
 			Result = getArea(&length, &width);
 			Assert::AreEqual(56, Result);
 		}
 
 		//TASK 2
 		TEST_METHOD(setLength_PositiveLength_TestUpperLimit) {
-			//testing the upper lmit of the setLength function
+			//testing the upper limit of the setLength function
 			int length = 1;
 			int input = 100;
 			setLength(input, &length);
 
-			//testing the an integer one out of range. one lower will be in range
+			//testing the an integer one out of range. one lower will be in range. if it is not in range these two should not be equal
 			Assert::IsFalse(input == length);
 		}
 
 		TEST_METHOD(setLength_PositiveLength_TestLowerLimit) {
-			//testing the lower lmit of the setLength function
+			//testing the lower limit of the setLength function
 			int length = 99;
 			int input = 0;
 			setLength(input, &length);
 
-			//testing an integer one out of range. one higher will be in range
+			//testing an integer one out of range. one higher will be in range. if it is not in range these two should not be equal
 			Assert::IsFalse (input == length);
 		}
 
 		TEST_METHOD(setLength_PositiveLength_TakesInput) {
-			//testing the lower lmit of the setLength function
+			//testing the input and length of the setLength function
 			int length = 60;
 			int input = 50;
 			setLength(input, &length);
 
-			//testing to see if some arbitary number that should work works.
+			//testing to see if some arbitary number that should work works. if it is in range these two should be equal
 			Assert::AreEqual(input, length);
 		}
 		// WIDTH
 		TEST_METHOD(setWidth_PositiveLength_TestUpperLimit) {
-			//testing the lower lmit of the setWidth function
+			//testing the upper limit of the setWidth function
 			int length = 1;
 			int input = 100;
 			setLength(input, &length);
 
-			//testing an integer that is one out of range. one less will be in range.
+			//testing an integer that is one out of range. one less will be in range. if it is not in range these two should not be equal
 			Assert::IsFalse(input == length);
 		}
 
 		TEST_METHOD(setWidth_PositiveLength_TestLowerLimit) {
-			//testing the lower lmit of the setWidth function
+			//testing the lower limit of the setWidth function
 			int length = 60;
 			int input = 0;
 			setLength(input, &length);
 
-			//testing the lowest possible integer. one higher will be in range.
+			//testing the lowest possible integer. one higher will be in range. if it is not in range these two should not be equal
 			Assert::IsFalse(input == length);
 
 		}
 		
 		TEST_METHOD(setWidth_PositiveLength_TakesInput) {
-			//testing the lower lmit of the setWidth function
+			//testing the input and length of setWidth function
 			int length = 99;
 			int input = 50;
 			setLength(input, &length);
 
-			//testing some arbitary number that should work
+			//testing some arbitary number that should work, if it is in range these two should be equal
 			Assert::AreEqual(input, length);
 
 		}
